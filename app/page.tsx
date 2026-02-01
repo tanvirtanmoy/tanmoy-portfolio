@@ -1,5 +1,6 @@
 import Hero from "./components/Hero";
 import ProjectsGallery from "./components/ProjectsGallery";
+import SideProjects from "./components/SideProjects";
 import SkillsVisualization from "./components/SkillsVisualization";
 import Timeline from "./components/Timeline";
 import Blog from "./components/Blog";
@@ -20,6 +21,13 @@ export default function Home() {
       {/* Divider */}
       <div className="max-w-6xl mx-auto px-6">
         <div className="h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
+      </div>
+
+      <SideProjects />
+
+      {/* Divider */}
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent" />
       </div>
 
       <SkillsVisualization />
