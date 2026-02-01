@@ -7,6 +7,13 @@ export default function Hero() {
       <div className="absolute bottom-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
+        {/* Profile Image */}
+        <div className="mb-8 flex justify-center">
+          <div className="w-32 h-32 rounded-full ring-4 ring-blue-500 overflow-hidden shadow-2xl shadow-blue-500/50 transform hover:scale-105 transition-transform duration-300">
+            <img src="/photo.jpg" alt="Profile" className="w-full h-full object-cover" />
+          </div>
+        </div>
+
         {/* Headline */}
         <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
           Data-Driven Engineer
