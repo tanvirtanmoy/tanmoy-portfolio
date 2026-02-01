@@ -52,7 +52,7 @@ const sideProjects: SideProject[] = [
 
 export default function SideProjects() {
   return (
-    <section className="py-20 px-6 max-w-6xl mx-auto">
+    <section id="side-projects" className="py-20 px-6 max-w-6xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-400">
           Side Projects

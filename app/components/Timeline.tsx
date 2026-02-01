@@ -55,7 +55,7 @@ const timeline: TimelineEvent[] = [
 
 export default function Timeline() {
   return (
-    <section className="py-20 px-6 max-w-4xl mx-auto">
+    <section id="timeline" className="py-20 px-6 max-w-4xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
           Career Journey
