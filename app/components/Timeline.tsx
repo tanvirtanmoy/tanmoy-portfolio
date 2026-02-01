@@ -22,22 +22,22 @@ const timeline: TimelineEvent[] = [
     year: "2023-2024",
     role: "Data Analyst",
     company: "Techno Teams",
-    description: "Analytics and data-driven insights",
+    description: "Analytics and data-driven insights for marketing and sales optimization",
     achievements: [
-      "To be updated with achievements",
-      "To be updated with achievements",
-      "To be updated with achievements",
+      "Assessed marketer performance through internal data analysis, achieving 35% increase in campaign effectiveness",
+      "Analyzed sales data from new online store, delivering demographic insights that drove 27% increase in targeted sales strategies",
+      "Designed interactive dashboards and reports for key business metrics, improving decision-making efficiency by 40%",
     ],
   },
   {
     year: "2023",
     role: "Research Intern",
     company: "ABN AMRO Bank N.V.",
-    description: "Research and analysis initiatives",
+    description: "Research and stakeholder analysis for business and IT alignment",
     achievements: [
-      "To be updated with achievements",
-      "To be updated with achievements",
-      "To be updated with achievements",
+      "Interviewed and assessed work procedures of 20+ stakeholders to differentiate business vs IT perspectives",
+      "Conducted thematic data analysis to identify data patterns and facilitate data-driven decision making",
+      "Supported strategy planning through comprehensive stakeholder research and insights",
     ],
   },
   {
@@ -46,9 +46,9 @@ const timeline: TimelineEvent[] = [
     company: "Techno Teams",
     description: "Technical Writing & Content Strategy Department",
     achievements: [
-      "To be updated with achievements",
-      "To be updated with achievements",
-      "To be updated with achievements",
+      "Led team of 5+ technical writers in creating documentation, user guides, and knowledge base articles for multiple products",
+      "Established content standards and style guides, improving documentation consistency and reducing review cycles by 30%",
+      "Mentored junior writers on technical communication best practices, contributing to team skill development and retention",
     ],
   },
 ];
