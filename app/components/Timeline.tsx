@@ -13,9 +13,9 @@ const timeline: TimelineEvent[] = [
     company: "NXP Semiconductors",
     description: "Leading data analytics, ML, and DevOps initiatives for HPC cluster management and job prediction systems",
     achievements: [
-      "Built and deployed 6+ production dashboards (CCRO KPI, HPC Workload Analyzer, Job Prophet) serving 10K+ users across global clusters",
-      "Engineered ML pipeline with feature engineering achieving 95% performance improvement in Job Prophet predictions using vectorization & clustering",
-      "Managed zero-downtime database migration to RTM database ensuring 100% data consistency across analytics products",
+      "Built and deployed 6+ production dashboards serving 10K+ users across global compute clusters with real-time monitoring",
+      "Engineered ML pipeline with feature engineering achieving 95% performance improvement using vectorization & clustering algorithms",
+      "Managed zero-downtime database migration ensuring 100% data consistency across analytics products",
     ],
   },
   {

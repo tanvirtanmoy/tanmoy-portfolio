@@ -11,8 +11,8 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: "Building Production ML Pipelines: Job Prophet at NXP",
-    excerpt: "From Tableau to Shiny: implementing vectorization (TFIDF, CountVectorizer), clustering algorithms (K-means, DBScan), and confidence scoring to improve ML predictions by 95%.",
+    title: "Building Production ML Pipelines for Resource Prediction",
+    excerpt: "From static reporting to interactive analytics: implementing vectorization (TFIDF, CountVectorizer), clustering algorithms (K-means, DBScan), and confidence scoring to improve ML predictions by 95%.",
     date: "Feb 1, 2025",
     readTime: "12 min read",
     category: "ML/Data Science",
@@ -21,16 +21,16 @@ const blogPosts: BlogPost[] = [
   {
     id: 2,
     title: "Multi-Cluster Dashboard Architecture at Scale",
-    excerpt: "Managing 6+ HPC clusters with real-time monitoring dashboards. Strategies for handling trapped slots, memory storms, and maintaining data consistency across 10K+ users.",
+    excerpt: "Managing 6+ compute clusters with real-time monitoring dashboards. Strategies for handling resource bottlenecks, capacity issues, and maintaining data consistency across 10K+ users.",
     date: "Jan 15, 2025",
     readTime: "14 min read",
     category: "Data Analytics",
-    tags: ["Tableau", "Architecture", "Scalability", "HPC"],
+    tags: ["Tableau", "Architecture", "Scalability", "Analytics"],
   },
   {
     id: 3,
-    title: "Zero-Downtime Database Migrations: RTM Database at NXP",
-    excerpt: "Migrating analytics dashboards from legacy RTM to new database version. Data validation strategies, testing approaches, and rollback procedures for production systems.",
+    title: "Zero-Downtime Database Migrations in Production",
+    excerpt: "Migrating analytics dashboards from legacy to new database version. Data validation strategies, testing approaches, and rollback procedures for production systems.",
     date: "Jan 5, 2025",
     readTime: "11 min read",
     category: "DevOps/Infrastructure",
@@ -48,21 +48,21 @@ const blogPosts: BlogPost[] = [
   {
     id: 5,
     title: "Feature Engineering for Project Delay Prediction",
-    excerpt: "Exploring Gate Position, Task Duration, and Percent Complete as predictive features using Recursive Feature Addition (RFA) and Random Forest Classifier for NPI projects.",
+    excerpt: "Exploring milestone position, task duration, and completion percentage as predictive features using Recursive Feature Addition (RFA) and Random Forest Classifier for project forecasting.",
     date: "Dec 5, 2024",
     readTime: "15 min read",
     category: "ML/Data Science",
-    tags: ["Feature Engineering", "Sciforma", "Random Forest", "Predictive Modeling"],
+    tags: ["Feature Engineering", "Project Data", "Random Forest", "Predictive Modeling"],
   },
   {
     id: 6,
     title: "Exploratory Data Analysis: Tool Performance Patterns",
-    excerpt: "Deep-dive into tool test results using Splunk and Python. Identifying performance patterns in Calibre, Spectre, Virtuoso for design team optimization.",
+    excerpt: "Deep-dive into engineering tool test results using Splunk and Python. Identifying performance patterns and bottlenecks for design team optimization.",
     date: "Nov 15, 2024",
     readTime: "10 min read",
     category: "Data Analytics",
     tags: ["EDA", "Splunk", "Tool Analytics", "Insights"],
-  },
+  }
 ];
 
 export default function Blog() {
