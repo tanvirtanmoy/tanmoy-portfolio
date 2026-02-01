@@ -1,9 +1,8 @@
 export default function Contact() {
   const socialLinks = [
-    { name: "LinkedIn", icon: "🔗", url: "https://linkedin.com", color: "hover:text-blue-400" },
-    { name: "GitHub", icon: "🐙", url: "https://github.com", color: "hover:text-slate-300" },
-    { name: "Twitter", icon: "𝕏", url: "https://twitter.com", color: "hover:text-cyan-400" },
-    { name: "Email", icon: "✉️", url: "mailto:hello@example.com", color: "hover:text-purple-400" },
+    { name: "LinkedIn", icon: "🔗", url: "https://www.linkedin.com/in/tanvir-tanmoy", color: "hover:text-blue-400" },
+    { name: "GitHub", icon: "🐙", url: "https://github.com/tanvirtanmoy", color: "hover:text-slate-300" },
+    { name: "Email", icon: "✉️", url: "mailto:tanmoy.tanvir001@gmail.com", color: "hover:text-purple-400" },
   ];
 
   return (
@@ -22,8 +21,8 @@ export default function Contact() {
           <div className="text-4xl mb-4">✉️</div>
           <h3 className="text-xl font-bold text-white mb-2">Email</h3>
           <p className="text-slate-400 mb-4">Reach out for collaboration or opportunities</p>
-          <a href="mailto:hello@example.com" className="text-blue-400 font-semibold hover:text-cyan-400 transition-colors">
-            hello@example.com
+          <a href="mailto:tanmoy.tanvir001@gmail.com" className="text-blue-400 font-semibold hover:text-cyan-400 transition-colors">
+            tanmoy.tanvir001@gmail.com
           </a>
         </div>
 
@@ -66,7 +65,7 @@ export default function Contact() {
           Interested in working together on data projects or want to discuss your pipeline architecture?
         </p>
         <a
-          href="mailto:hello@example.com"
+          href="mailto:tanmoy.tanvir001@gmail.com"
           className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105"
         >
           Send me an Email
