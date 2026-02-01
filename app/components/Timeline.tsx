@@ -11,11 +11,11 @@ const timeline: TimelineEvent[] = [
     year: "2024-Present",
     role: "BI DevOps Engineer",
     company: "NXP Semiconductors",
-    description: "Building and maintaining BI infrastructure and DevOps pipelines",
+    description: "Leading data analytics, ML, and DevOps initiatives for HPC cluster management and job prediction systems",
     achievements: [
-      "To be updated with achievements",
-      "To be updated with achievements",
-      "To be updated with achievements",
+      "Built and deployed 6+ production dashboards (CCRO KPI, HPC Workload Analyzer, Job Prophet) serving 10K+ users across global clusters",
+      "Engineered ML pipeline with feature engineering achieving 95% performance improvement in Job Prophet predictions using vectorization & clustering",
+      "Managed zero-downtime database migration to RTM database ensuring 100% data consistency across analytics products",
     ],
   },
   {

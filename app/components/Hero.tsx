@@ -19,16 +19,16 @@ export default function Hero() {
         {/* Key Metrics */}
         <div className="grid grid-cols-3 gap-6 mb-12 max-w-2xl mx-auto">
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-4">
-            <div className="text-3xl font-bold text-blue-400 mb-1">50+</div>
-            <div className="text-sm text-slate-400">Data Projects</div>
+            <div className="text-3xl font-bold text-blue-400 mb-1">6+</div>
+            <div className="text-sm text-slate-400">Dashboards in Prod</div>
           </div>
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-4">
-            <div className="text-3xl font-bold text-cyan-400 mb-1">5+</div>
-            <div className="text-sm text-slate-400">Years Experience</div>
+            <div className="text-3xl font-bold text-cyan-400 mb-1">137+</div>
+            <div className="text-sm text-slate-400">Deployments</div>
           </div>
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-4">
-            <div className="text-3xl font-bold text-purple-400 mb-1">100M+</div>
-            <div className="text-sm text-slate-400">Records Processed</div>
+            <div className="text-3xl font-bold text-purple-400 mb-1">10K+</div>
+            <div className="text-sm text-slate-400">Users Across Clusters</div>
           </div>
         </div>
 

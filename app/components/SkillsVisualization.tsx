@@ -6,38 +6,38 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  // Programming & Querying
-  { name: "Python", proficiency: 95, category: "Programming", icon: "🐍" },
-  { name: "SQL", proficiency: 98, category: "Programming", icon: "📝" },
-  { name: "Scala", proficiency: 75, category: "Programming", icon: "🎯" },
-  { name: "JavaScript/TypeScript", proficiency: 80, category: "Programming", icon: "⚙️" },
+  // Programming & Analytics
+  { name: "SQL", proficiency: 96, category: "Programming", icon: "📝" },
+  { name: "Python", proficiency: 92, category: "Programming", icon: "🐍" },
+  { name: "R / Shiny", proficiency: 88, category: "Programming", icon: "📊" },
+  { name: "Flask / Web Dev", proficiency: 78, category: "Programming", icon: "⚙️" },
 
-  // Big Data & Frameworks
-  { name: "Apache Spark", proficiency: 92, category: "Big Data", icon: "⚡" },
-  { name: "Apache Kafka", proficiency: 85, category: "Big Data", icon: "📨" },
-  { name: "Apache Airflow", proficiency: 88, category: "Big Data", icon: "🔄" },
-  { name: "dbt", proficiency: 87, category: "Big Data", icon: "🏗️" },
+  // BI & Analytics Platforms
+  { name: "Tableau", proficiency: 94, category: "BI/Analytics", icon: "📈" },
+  { name: "Tableau Cloud", proficiency: 90, category: "BI/Analytics", icon: "☁️" },
+  { name: "Splunk", proficiency: 85, category: "BI/Analytics", icon: "🔍" },
+  { name: "Dashboard Design", proficiency: 91, category: "BI/Analytics", icon: "🎨" },
 
-  // Cloud Platforms
-  { name: "AWS", proficiency: 90, category: "Cloud", icon: "☁️" },
-  { name: "Redshift", proficiency: 88, category: "Cloud", icon: "🗄️" },
-  { name: "S3/Data Lake", proficiency: 92, category: "Cloud", icon: "💾" },
-  { name: "Lambda/EC2", proficiency: 85, category: "Cloud", icon: "🚀" },
+  // Cloud & Infrastructure
+  { name: "AWS Athena", proficiency: 89, category: "Cloud", icon: "🗂️" },
+  { name: "AWS S3", proficiency: 87, category: "Cloud", icon: "💾" },
+  { name: "AWS EC2", proficiency: 85, category: "Cloud", icon: "🚀" },
+  { name: "AWS Lambda", proficiency: 82, category: "Cloud", icon: "⚡" },
 
-  // Analytics & Visualization
-  { name: "Tableau", proficiency: 90, category: "Analytics", icon: "📊" },
-  { name: "Power BI", proficiency: 82, category: "Analytics", icon: "📈" },
-  { name: "Data Visualization", proficiency: 89, category: "Analytics", icon: "🎨" },
-  { name: "Statistical Analysis", proficiency: 86, category: "Analytics", icon: "📐" },
+  // Data & ML Engineering
+  { name: "Feature Engineering", proficiency: 91, category: "ML/Data Science", icon: "🔧" },
+  { name: "Random Forest / Clustering", proficiency: 88, category: "ML/Data Science", icon: "🌳" },
+  { name: "Scikit-learn", proficiency: 90, category: "ML/Data Science", icon: "📚" },
+  { name: "Data Validation & QA", proficiency: 93, category: "ML/Data Science", icon: "✅" },
 
-  // ML & Data Science
-  { name: "Machine Learning", proficiency: 87, category: "ML/DS", icon: "🤖" },
-  { name: "TensorFlow/PyTorch", proficiency: 78, category: "ML/DS", icon: "🧠" },
-  { name: "scikit-learn", proficiency: 91, category: "ML/DS", icon: "📚" },
-  { name: "Statistics", proficiency: 88, category: "ML/DS", icon: "📊" },
+  // DevOps & Orchestration
+  { name: "PowerAutomate Workflows", proficiency: 87, category: "DevOps", icon: "🔄" },
+  { name: "Data Pipeline Design", proficiency: 89, category: "DevOps", icon: "🔗" },
+  { name: "Git & CI/CD", proficiency: 84, category: "DevOps", icon: "📦" },
+  { name: "Database Migration", proficiency: 85, category: "DevOps", icon: "🔀" },
 ];
 
-const categories = ["Programming", "Big Data", "Cloud", "Analytics", "ML/DS"];
+const categories = ["Programming", "BI/Analytics", "Cloud", "DevOps", "ML/Data Science"];
 
 export default function SkillsVisualization() {
   return (
