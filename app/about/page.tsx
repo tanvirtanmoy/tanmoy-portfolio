@@ -1,8 +1,69 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { personName, siteUrl } from "../seo";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "About Tanmoy: BI DevOps and Data Analytics Engineer with experience in ML pipelines, cloud automation, and sustainability-driven software engineering.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Tanmoy | BI DevOps & Data Analytics Engineer",
+    description:
+      "Background, career journey, and technical focus across analytics engineering, cloud, and machine learning.",
+    url: `${siteUrl}/about`,
+    type: "profile",
+  },
+};
 
 export default function About() {
+  const aboutStructuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfilePage",
+        url: `${siteUrl}/about`,
+        name: "About Tanmoy",
+        isPartOf: {
+          "@type": "WebSite",
+          name: "Tanmoy Portfolio",
+          url: siteUrl,
+        },
+        mainEntity: {
+          "@type": "Person",
+          name: personName,
+          jobTitle: "BI DevOps & Data Analytics Engineer",
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: siteUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "About",
+            item: `${siteUrl}/about`,
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800 pt-20 relative overflow-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutStructuredData) }}
+      />
+
       {/* Animated background blobs */}
       <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
