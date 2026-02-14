@@ -9,7 +9,7 @@ export default function Contact() {
     <section id="contact" className="py-20 px-6 max-w-4xl mx-auto">
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400">
-          Let's Connect
+          Let&apos;s Connect
         </h2>
         <p className="text-slate-400 text-lg">Open to collaboration, opportunities, and discussing all things data</p>
       </div>
@@ -30,9 +30,9 @@ export default function Contact() {
         <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-lg p-8 text-center hover:border-purple-400 transition-colors">
           <div className="text-4xl mb-4">📅</div>
           <h3 className="text-xl font-bold text-white mb-2">Schedule a Call</h3>
-          <p className="text-slate-400 mb-4">Let's discuss your data challenges</p>
+          <p className="text-slate-400 mb-4">Let&apos;s discuss your data challenges</p>
           <a
-            href="#"
+            href="mailto:tanmoy.tanvir001@gmail.com?subject=Schedule%20a%2030-min%20call"
             className="text-purple-400 font-semibold hover:text-pink-400 transition-colors"
           >
             Book a 30-min call

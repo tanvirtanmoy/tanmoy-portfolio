@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative overflow-hidden">
@@ -10,7 +12,14 @@ export default function Hero() {
         {/* Profile Image */}
         <div className="mb-8 flex justify-center">
           <div className="w-32 h-32 rounded-full ring-4 ring-blue-500 overflow-hidden shadow-2xl shadow-blue-500/50 transform hover:scale-105 transition-transform duration-300">
-            <img src="/photo.jpg" alt="Profile" className="w-full h-full object-cover" />
+            <Image
+              src="/photo.jpg"
+              alt="Profile"
+              width={128}
+              height={128}
+              priority
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
 

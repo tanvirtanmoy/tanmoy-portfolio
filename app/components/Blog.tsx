@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface BlogPost {
   id: number;
   title: string;
@@ -6,6 +8,7 @@ interface BlogPost {
   readTime: string;
   category: string;
   tags: string[];
+  href: string;
 }
 
 const blogPosts: BlogPost[] = [
@@ -17,6 +20,7 @@ const blogPosts: BlogPost[] = [
     readTime: "12 min read",
     category: "ML/Data Science",
     tags: ["ML", "Shiny", "Feature Engineering", "Production"],
+    href: "/#contact",
   },
   {
     id: 2,
@@ -26,6 +30,7 @@ const blogPosts: BlogPost[] = [
     readTime: "14 min read",
     category: "Data Analytics",
     tags: ["Tableau", "Architecture", "Scalability", "Analytics"],
+    href: "/#contact",
   },
   {
     id: 3,
@@ -35,6 +40,7 @@ const blogPosts: BlogPost[] = [
     readTime: "11 min read",
     category: "DevOps/Infrastructure",
     tags: ["Database", "Migration", "Data Validation", "Deployment"],
+    href: "/#contact",
   },
   {
     id: 4,
@@ -44,6 +50,7 @@ const blogPosts: BlogPost[] = [
     readTime: "13 min read",
     category: "DevOps/Infrastructure",
     tags: ["Automation", "AWS", "PowerAutomate", "Governance"],
+    href: "/#contact",
   },
   {
     id: 5,
@@ -53,6 +60,7 @@ const blogPosts: BlogPost[] = [
     readTime: "15 min read",
     category: "ML/Data Science",
     tags: ["Feature Engineering", "Project Data", "Random Forest", "Predictive Modeling"],
+    href: "/#contact",
   },
   {
     id: 6,
@@ -62,6 +70,7 @@ const blogPosts: BlogPost[] = [
     readTime: "10 min read",
     category: "Data Analytics",
     tags: ["EDA", "Splunk", "Tool Analytics", "Insights"],
+    href: "/#contact",
   }
 ];
 
@@ -111,9 +120,9 @@ export default function Blog() {
               {/* Date & Read More */}
               <div className="flex items-center justify-between">
                 <span className="text-xs text-slate-500">{post.date}</span>
-                <a href="#" className="text-blue-400 text-sm font-semibold hover:text-cyan-400 transition-colors">
+                <Link href={post.href} aria-label={`Discuss article: ${post.title}`} className="text-blue-400 text-sm font-semibold hover:text-cyan-400 transition-colors">
                   Read More →
-                </a>
+                </Link>
               </div>
             </div>
           </article>
@@ -122,12 +131,12 @@ export default function Blog() {
 
       {/* View All CTA */}
       <div className="text-center mt-12">
-        <a
-          href="#"
+        <Link
+          href="/#contact"
           className="inline-block px-8 py-3 border-2 border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400/10 transition-all duration-300"
         >
           View All Articles
-        </a>
+        </Link>
       </div>
     </section>
   );

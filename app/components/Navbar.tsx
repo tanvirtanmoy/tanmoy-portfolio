@@ -41,6 +41,9 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
             className="md:hidden flex flex-col gap-1.5 cursor-pointer"
           >
             <div className={`w-6 h-0.5 bg-blue-400 transition-all ${isOpen ? "rotate-45 translate-y-2" : ""}`} />
@@ -51,7 +54,7 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-4 flex flex-col gap-4 border-t border-slate-700 pt-4">
+          <div id="mobile-navigation" className="md:hidden mt-4 flex flex-col gap-4 border-t border-slate-700 pt-4">
             {navLinks.map((link) => (
               <Link
                 key={link.name}

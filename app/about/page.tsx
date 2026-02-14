@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function About() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800 pt-20 relative overflow-hidden">
@@ -30,7 +32,7 @@ export default function About() {
           </div>
           <div className="bg-gradient-to-br from-blue-500/5 to-cyan-500/5 backdrop-blur-sm border border-blue-500/20 rounded-xl p-8 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10">
             <p className="text-slate-300 text-lg leading-relaxed mb-4">
-              I'm a data-driven professional with a strong background in data analysis, data engineering, and cloud infrastructure. I leverage complex datasets to uncover actionable insights that empower organizations to make well-informed decisions. My expertise spans across the full data lifecycle—from pipeline architecture to analytics—enabling me to bridge technical excellence with business impact.
+              I&apos;m a data-driven professional with a strong background in data analysis, data engineering, and cloud infrastructure. I leverage complex datasets to uncover actionable insights that empower organizations to make well-informed decisions. My expertise spans across the full data lifecycle—from pipeline architecture to analytics—enabling me to bridge technical excellence with business impact.
             </p>
             <p className="text-slate-300 text-lg leading-relaxed">
               My proficiency in BI tools (Tableau, Power BI) combined with strong programming skills in SQL and Python allows me to transform raw data into compelling narratives. As a collaborative team player, I excel at fostering effective communication and project management, ensuring stakeholders understand insights and can act on them confidently.
@@ -46,10 +48,10 @@ export default function About() {
           </div>
           <div className="bg-gradient-to-br from-purple-500/5 to-pink-500/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 hover:border-purple-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
             <p className="text-slate-300 text-lg leading-relaxed mb-4">
-              My journey in technology began with a bachelor's degree in Computer Science from American International University-Bangladesh, where I developed a strong foundation in software engineering principles. However, my true passion emerged during my master's studies through the prestigious Software Engineers for Green Deal (SE4GD) program—an Erasmus Mundus initiative spanning three European universities: Università degli Studi dell'Aquila (Italy), LUT University (Finland), and Vrije Universiteit Amsterdam (Netherlands).
+              My journey in technology began with a bachelor&apos;s degree in Computer Science from American International University-Bangladesh, where I developed a strong foundation in software engineering principles. However, my true passion emerged during my master&apos;s studies through the prestigious Software Engineers for Green Deal (SE4GD) program—an Erasmus Mundus initiative spanning three European universities: Università degli Studi dell&apos;Aquila (Italy), LUT University (Finland), and Vrije Universiteit Amsterdam (Netherlands).
             </p>
             <p className="text-slate-300 text-lg leading-relaxed">
-              This transformative experience deepened my understanding of sustainability in software engineering and the critical role that IT plays in achieving global sustainability goals. I'm passionate about leveraging data and technology as catalysts for positive environmental and social impact. Today, I combine my technical expertise with this sustainability mindset, seeking projects and organizations that prioritize both innovation and responsibility.
+              This transformative experience deepened my understanding of sustainability in software engineering and the critical role that IT plays in achieving global sustainability goals. I&apos;m passionate about leveraging data and technology as catalysts for positive environmental and social impact. Today, I combine my technical expertise with this sustainability mindset, seeking projects and organizations that prioritize both innovation and responsibility.
             </p>
           </div>
         </section>
@@ -94,7 +96,7 @@ export default function About() {
                       Master of Science - Software Engineers for Green Deal (SE4GD)
                     </h3>
                     <p className="text-slate-400 mb-2 font-semibold">Erasmus Mundus Joint Masters Program (Sep 2021 - Aug 2023)</p>
-                    <p className="text-slate-400 text-sm mb-2">🇮🇹 Università degli Studi dell'Aquila • 🇫🇮 LUT University • 🇳🇱 Vrije Universiteit Amsterdam</p>
+                    <p className="text-slate-400 text-sm mb-2">🇮🇹 Università degli Studi dell&apos;Aquila • 🇫🇮 LUT University • 🇳🇱 Vrije Universiteit Amsterdam</p>
                     <p className="text-slate-300 text-sm italic">Specialization: Sustainability in Software Engineering & Green IT</p>
                   </div>
                 </div>
@@ -131,18 +133,18 @@ export default function About() {
           </div>
         </section>
 
-        {/* What I'm Looking For */}
+        {/* What I&apos;m Looking For */}
         <section className="mb-16">
           <div className="flex items-center gap-3 mb-6">
             <div className="text-4xl">🎯</div>
-            <h2 className="text-3xl font-bold text-white">What I'm Looking For</h2>
+            <h2 className="text-3xl font-bold text-white">What I&apos;m Looking For</h2>
           </div>
           <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-xl p-8 hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/15">
             <p className="text-slate-300 text-lg leading-relaxed mb-4">
-              I'm seeking challenging opportunities where I can apply my data engineering and analytics expertise while contributing to meaningful, sustainable outcomes. I'm interested in roles that value innovation, data-driven decision-making, and environmental responsibility—whether in tech, finance, energy, or other forward-thinking organizations.
+              I&apos;m seeking challenging opportunities where I can apply my data engineering and analytics expertise while contributing to meaningful, sustainable outcomes. I&apos;m interested in roles that value innovation, data-driven decision-making, and environmental responsibility—whether in tech, finance, energy, or other forward-thinking organizations.
             </p>
             <p className="text-slate-300 text-lg leading-relaxed">
-              I'm open to collaborative projects, mentorship opportunities, and conversations about leveraging data for social and environmental impact. If you're working on something interesting or think we could create synergy, I'd love to connect and explore possibilities together.
+              I&apos;m open to collaborative projects, mentorship opportunities, and conversations about leveraging data for social and environmental impact. If you&apos;re working on something interesting or think we could create synergy, I&apos;d love to connect and explore possibilities together.
             </p>
           </div>
         </section>
@@ -150,13 +152,13 @@ export default function About() {
         {/* CTA */}
         <section className="text-center pt-12 border-t border-slate-700/50">
           <div className="text-5xl mb-4">💫</div>
-          <p className="text-slate-400 mb-8 text-lg">Let's work together on something amazing</p>
-          <a
+          <p className="text-slate-400 mb-8 text-lg">Let&apos;s work together on something amazing</p>
+          <Link
             href="/#contact"
             className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105"
           >
             Get In Touch
-          </a>
+          </Link>
         </section>
       </div>
     </main>

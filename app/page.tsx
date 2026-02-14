@@ -57,7 +57,7 @@ export default function Home() {
       <footer className="py-12 px-6 border-t border-slate-700">
         <div className="max-w-6xl mx-auto text-center text-slate-400">
           <p className="mb-4">Built with Next.js, React, and Tailwind CSS</p>
-          <p className="text-sm">© 2024 Tanmoy. All rights reserved.</p>
+          <p className="text-sm">© 2026 Tanmoy. All rights reserved.</p>
         </div>
       </footer>
     </main>
