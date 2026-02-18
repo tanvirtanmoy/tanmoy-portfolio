@@ -1,25 +1,41 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { getRecentBlogPosts } from "@/app/lib/blog";
+import { getAllBlogPosts } from "@/app/lib/blog";
+import { siteUrl } from "../seo";
 
-export default async function Blog() {
-  const posts = await getRecentBlogPosts(3);
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "Articles on data engineering, analytics, machine learning, and cloud operations.",
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title: "Blog | Tanmoy",
+    description: "Technical articles on data engineering, ML, analytics, and cloud delivery.",
+    url: `${siteUrl}/blog`,
+    type: "website",
+  },
+};
+
+export default async function BlogPage() {
+  const posts = await getAllBlogPosts();
 
   return (
-    <section id="blog" className="py-20 px-6 max-w-6xl mx-auto">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">
-          Insights & Articles
-        </h2>
-        <p className="text-slate-400 text-lg">Sharing knowledge on data engineering, ML, and analytics</p>
-      </div>
-
-      {posts.length === 0 ? (
-        <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-10 text-center">
-          <p className="text-slate-300 text-lg font-semibold mb-2">No blog posts published yet</p>
-          <p className="text-slate-400">Add MDX files in content/blog to publish your first article.</p>
+    <main className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800 pt-28 pb-16 px-6">
+      <section className="max-w-6xl mx-auto">
+        <div className="mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">
+            Blog
+          </h1>
+          <p className="text-slate-400 text-lg">Real posts on data engineering, ML, analytics, and cloud systems.</p>
         </div>
-      ) : (
-        <>
+
+        {posts.length === 0 ? (
+          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-10 text-center">
+            <p className="text-slate-300 text-lg font-semibold mb-2">No blog posts published yet</p>
+            <p className="text-slate-400">Add MDX files in content/blog to publish your first article.</p>
+          </div>
+        ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {posts.map((post) => (
               <article
@@ -33,7 +49,7 @@ export default async function Blog() {
                   {post.readTime ? <span className="text-xs text-slate-400">{post.readTime}</span> : null}
                 </div>
 
-                <h3 className="text-lg font-bold text-white mb-3 line-clamp-2">{post.title}</h3>
+                <h2 className="text-lg font-bold text-white mb-3 line-clamp-2">{post.title}</h2>
                 <p className="text-slate-400 text-sm mb-4 flex-grow line-clamp-3">{post.excerpt}</p>
 
                 <div className="space-y-3 pt-4 border-t border-slate-700">
@@ -55,17 +71,8 @@ export default async function Blog() {
               </article>
             ))}
           </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/blog"
-              className="inline-block px-8 py-3 border-2 border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400/10 transition-all duration-300"
-            >
-              View All Articles
-            </Link>
-          </div>
-        </>
-      )}
-    </section>
+        )}
+      </section>
+    </main>
   );
 }
