@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import type { ComponentPropsWithoutRef } from "react";
+import ReadingProgress from "@/app/components/ReadingProgress";
 import { getBlogPostBySlug, getBlogSlugs } from "@/app/lib/blog";
 import { siteUrl } from "../../seo";
 
@@ -96,6 +97,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800 pt-28 pb-16 px-6">
+      <ReadingProgress />
       <article className="max-w-3xl mx-auto">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
@@ -122,7 +124,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           ) : null}
         </header>
 
-        <div className="max-w-none">
+        <div className="max-w-none article-content">
           <MDXRemote source={post.content} components={mdxComponents} />
         </div>
       </article>

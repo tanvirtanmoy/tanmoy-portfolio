@@ -64,3 +64,28 @@ a {
 a:hover {
   color: var(--accent);
 }
+
+.article-content {
+  counter-reset: section;
+}
+
+.article-content h2 {
+  counter-increment: section;
+  counter-reset: subsection;
+}
+
+.article-content h2::before {
+  content: counter(section) ". ";
+  color: #60a5fa;
+  margin-right: 0.25rem;
+}
+
+.article-content h3 {
+  counter-increment: subsection;
+}
+
+.article-content h3::before {
+  content: counter(section) "." counter(subsection) " ";
+  color: #22d3ee;
+  margin-right: 0.25rem;
+}
