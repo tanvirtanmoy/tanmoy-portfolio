@@ -1,0 +1,323 @@
+---
+title: "ACID in Data Engineering: From Simple Examples to Distributed Systems Internals"
+excerpt: "A practical deep dive into how Atomicity, Consistency, Isolation, and Durability are implemented across databases, lakehouses, and distributed systems."
+date: "2026-02-18"
+category: "Data Engineering"
+tags:
+  - ACID
+  - Distributed Systems
+  - Lakehouse
+  - Spark
+  - Transactions
+readTime: "12 min read"
+published: true
+---
+
+Modern data platforms allow multiple jobs to read and write data at the same time.
+
+- Spark jobs run while ingestion pipelines are updating tables.
+- Streaming systems append new data while dashboards query historical results.
+- Nodes crash. Networks fail.
+
+And yet… your data usually doesn’t corrupt.
+
+Why?
+
+Because of ACID.
+
+But ACID is not just four textbook words. It’s a collection of engineering mechanisms implemented deep inside storage engines, transaction logs, and distributed coordination systems.
+
+Let’s start simple — and go all the way down.
+
+## What is ACID? (Simple Explanation)
+
+ACID stands for:
+
+- Atomicity
+- Consistency
+- Isolation
+- Durability
+
+These four properties guarantee that transactions behave reliably.
+
+## Simple Bank Transfer Example
+
+Imagine Alice transfers €100 to Bob.
+
+Two things must happen:
+
+1. Alice’s balance decreases by €100
+2. Bob’s balance increases by €100
+
+### Atomicity
+
+Either both operations succeed, or neither does. No half-completed transfers.
+
+### Consistency
+
+The total money in the system remains correct before and after the transaction.
+
+### Isolation
+
+If two transfers happen at the same time, they don’t interfere in a way that corrupts balances.
+
+### Durability
+
+Once the transfer is confirmed, it survives crashes.
+
+That’s the theory.
+
+Now let’s see how systems actually implement this.
+
+## Atomicity & Durability: How Systems Make Changes Crash-Safe
+
+The core mechanism behind atomicity and durability is **Write-Ahead Logging (WAL)**.
+
+Used in systems like PostgreSQL and MySQL.
+
+### The Rule
+
+Before modifying actual data files, the system writes the change to a log.
+
+Only after the log is safely persisted to disk does it update the real data.
+
+### Why?
+
+If the system crashes:
+
+- It replays the log.
+- It reconstructs the correct state.
+
+This ensures:
+
+- No partial writes
+- No corrupted rows
+- No lost committed transactions
+
+Durability depends not just on writing to memory, but forcing the log to disk (`fsync`).
+This ordering is what makes databases crash-safe.
+
+## Isolation: Preventing Transactions From Interfering
+
+Now things get more interesting.
+
+If multiple transactions run at the same time, how do we prevent chaos?
+
+There are two major approaches:
+
+- Locking
+- MVCC
+
+### Traditional Locking
+
+Older systems rely heavily on locks:
+
+- Row-level locks
+- Table-level locks
+- Blocking readers or writers
+
+While safe, locking reduces concurrency and can cause contention.
+
+Modern analytical systems prefer something smarter.
+
+### MVCC — Multi-Version Concurrency Control
+
+Instead of overwriting data immediately, systems create new versions.
+
+Each transaction:
+
+- Has a start timestamp
+- Sees only data committed before it started
+
+Writers create new row versions.
+Readers continue seeing the old version.
+
+This is how:
+
+- Long-running queries don’t block ingestion
+- Concurrent writes don’t corrupt results
+
+PostgreSQL uses MVCC at the row level.
+
+Lakehouse systems use the same idea — but at the file level.
+
+## Snapshot Isolation
+
+Snapshot Isolation means:
+
+When your query starts, it sees a consistent snapshot of the data at that moment.
+
+Even if new data arrives while the query runs, your result does not change mid-execution.
+
+This is critical in analytics:
+
+- A 30-minute Spark job must see consistent data.
+- It cannot return “half old, half new” results.
+
+But here’s something important:
+
+**Snapshot Isolation ≠ Serializable Isolation**
+
+Snapshot isolation still allows certain anomalies.
+
+### Example: Phantom Reads
+
+Transaction A:
+
+- Counts rows where `status = "pending"`
+
+Transaction B:
+
+- Inserts a new `pending` row
+- Commits
+
+Transaction A runs the same query again.
+
+It now sees more rows than before.
+
+That’s a phantom read.
+
+Snapshot isolation prevents many conflicts — but not all.
+
+## Serializable Isolation (Stronger Guarantees)
+
+Serializable isolation guarantees:
+
+The result is as if transactions ran one after another in some order.
+
+- No phantoms
+- No write skew
+- No anomalies
+
+But this comes at a cost:
+
+- More coordination
+- More locking or validation
+- Reduced performance
+
+Some distributed databases implement Serializable Snapshot Isolation (SSI).
+
+For example, Google Spanner uses tightly synchronized clocks (TrueTime) to maintain strong guarantees across global nodes.
+
+This is where ACID becomes a distributed systems problem.
+
+## ACID in Distributed Systems
+
+Single-node databases are simpler.
+
+In distributed systems:
+
+- Nodes can fail independently
+- Network partitions can occur
+- Partial commits are possible
+
+To coordinate transactions across nodes, systems use **Two-Phase Commit (2PC)**.
+
+### Phase 1: Prepare
+
+All participants agree they can commit.
+
+### Phase 2: Commit
+
+Coordinator instructs all to finalize.
+
+But 2PC has drawbacks:
+
+- If coordinator crashes, participants may block
+- It reduces availability
+
+To solve broader consensus problems, systems use protocols like:
+
+- Paxos
+- Raft
+
+Now ACID is no longer just about storage.
+It becomes about coordination and consensus.
+
+## ACID in Lakehouse Architectures
+
+Modern data engineering platforms like:
+
+- Delta Lake
+- Apache Iceberg
+
+Implement ACID differently.
+
+They do not use row-level MVCC.
+
+Instead, they rely on:
+
+- File-level versioning
+- Metadata transaction logs
+- Atomic metadata commits
+- Optimistic concurrency control
+
+### Optimistic Concurrency Control
+
+Writers:
+
+1. Read current metadata version
+2. Write new data files
+3. Attempt to commit new metadata version
+
+If metadata changed → retry.
+
+No heavy locks.
+Conflicts are detected at commit time.
+
+This enables high write concurrency in data lakes.
+
+## How Spark Achieves Snapshot Isolation
+
+When Spark reads a Delta or Iceberg table:
+
+1. It reads a specific table version
+2. That version points to a specific set of files
+
+Writers produce new files and create a new version.
+
+Readers continue reading their original version.
+
+Only after metadata commit does the new version become visible.
+
+This is snapshot isolation implemented at the file and metadata layer.
+
+## Trade-offs of ACID
+
+ACID guarantees correctness.
+
+But it comes with trade-offs:
+
+- Write amplification (logs + data files)
+- Metadata overhead
+- Compaction requirements
+- Retry conflicts under heavy concurrency
+- Increased coordination cost in distributed systems
+
+Engineering is always about balancing:
+
+- Correctness
+- Performance
+- Scalability
+
+## Final Thoughts
+
+ACID is not just an acronym.
+
+It is:
+
+- Logging mechanisms
+- Version management
+- Isolation protocols
+- Crash recovery strategies
+- Distributed coordination algorithms
+
+Understanding ACID means understanding how data systems survive concurrency, crashes, and scale.
+
+It separates:
+
+Using data tools
+from
+Designing data platforms.
+
+And in modern data engineering, that difference matters.
