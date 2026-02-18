@@ -9,14 +9,14 @@ import Contact from "./components/Contact";
 import { personName, siteUrl } from "./seo";
 
 export const metadata: Metadata = {
-  title: "BI DevOps & Data Analytics Engineer Portfolio",
+  title: "Tanmoy",
   description:
     "Explore Tanmoy's portfolio featuring data engineering pipelines, Tableau analytics products, cloud automation, and ML-powered prediction systems.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "BI DevOps & Data Analytics Engineer Portfolio",
+    title: "Tanmoy",
     description:
       "Production dashboards, cloud-scale analytics, and ML systems focused on measurable impact.",
     url: siteUrl,

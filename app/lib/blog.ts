@@ -74,28 +74,27 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
 
 export async function getAllBlogPosts(): Promise<BlogPostSummary[]> {
   const slugs = await getBlogSlugs();
+  const summaries: BlogPostSummary[] = [];
 
-  const posts = await Promise.all(
-    slugs.map(async (slug) => {
-      const post = await getBlogPostBySlug(slug);
-      if (!post) {
-        return null;
-      }
+  for (const slug of slugs) {
+    const post = await getBlogPostBySlug(slug);
+    if (!post) {
+      continue;
+    }
 
-      return {
-        slug: post.slug,
-        title: post.title,
-        excerpt: post.excerpt,
-        date: post.date,
-        category: post.category,
-        tags: post.tags,
-        readTime: post.readTime,
-        published: post.published,
-      };
-    }),
-  );
+    summaries.push({
+      slug: post.slug,
+      title: post.title,
+      excerpt: post.excerpt,
+      date: post.date,
+      category: post.category,
+      tags: post.tags,
+      readTime: post.readTime,
+      published: post.published,
+    });
+  }
 
-  return posts.filter((post): post is BlogPostSummary => post !== null).sort(byDateDesc);
+  return summaries.sort(byDateDesc);
 }
 
 export async function getRecentBlogPosts(limit = 3): Promise<BlogPostSummary[]> {

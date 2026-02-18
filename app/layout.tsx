@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Tanmoy | BI DevOps & Data Analytics Engineer",
-    template: "%s | Tanmoy",
+    default: "Tanmoy",
+    template: "%s",
   },
   description:
     "BI DevOps and Analytics Engineer portfolio showcasing real-time data pipelines, ML systems, cloud automation, and production dashboards with measurable business impact.",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Tanmoy | BI DevOps & Data Analytics Engineer",
+    title: "Tanmoy",
     description:
       "Real-time pipelines, production analytics dashboards, and machine learning solutions across cloud infrastructure.",
     url: siteUrl,
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tanmoy | BI DevOps & Data Analytics Engineer",
+    title: "Tanmoy",
     description:
       "Portfolio of production-grade data engineering, BI analytics, and ML delivery across modern cloud stacks.",
   },
