@@ -40,6 +40,10 @@ ACID stands for:
 
 These four properties guarantee that transactions behave reliably.
 
+![ACID foundations overview](/blog/acid-pillars.svg)
+
+_Figure: ACID as four complementary guarantees for reliable transaction processing._
+
 ## Simple Bank Transfer Example
 
 Imagine Alice transfers €100 to Bob.
@@ -96,6 +100,10 @@ This ensures:
 
 Durability depends not just on writing to memory, but forcing the log to disk (`fsync`).
 This ordering is what makes databases crash-safe.
+
+![Write-Ahead Logging flow](/blog/wal-flow.svg)
+
+_Figure: WAL ordering ensures changes are recoverable before data files are updated._
 
 ## Isolation: Preventing Transactions From Interfering
 
@@ -266,6 +274,10 @@ No heavy locks.
 Conflicts are detected at commit time.
 
 This enables high write concurrency in data lakes.
+
+![Lakehouse commit flow](/blog/lakehouse-commit-flow.svg)
+
+_Figure: Optimistic concurrency in lakehouses uses atomic metadata commits and retries on conflicts._
 
 ## How Spark Achieves Snapshot Isolation
 

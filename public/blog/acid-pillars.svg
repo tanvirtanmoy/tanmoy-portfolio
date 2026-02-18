@@ -1,0 +1,29 @@
+<svg width="1200" height="540" viewBox="0 0 1200 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="540" rx="24" fill="#0F172A"/>
+  <text x="600" y="82" fill="#E2E8F0" font-size="42" font-family="Inter, Arial, sans-serif" text-anchor="middle" font-weight="700">ACID Foundations</text>
+  <text x="600" y="118" fill="#94A3B8" font-size="20" font-family="Inter, Arial, sans-serif" text-anchor="middle">Reliable transactions under concurrency and failures</text>
+
+  <rect x="90" y="170" width="240" height="280" rx="16" fill="#1E293B" stroke="#3B82F6" stroke-width="2"/>
+  <text x="210" y="220" fill="#60A5FA" font-size="34" font-family="Inter, Arial, sans-serif" text-anchor="middle" font-weight="700">A</text>
+  <text x="210" y="258" fill="#E2E8F0" font-size="26" font-family="Inter, Arial, sans-serif" text-anchor="middle" font-weight="700">Atomicity</text>
+  <text x="210" y="300" fill="#94A3B8" font-size="18" font-family="Inter, Arial, sans-serif" text-anchor="middle">All-or-nothing</text>
+  <text x="210" y="328" fill="#94A3B8" font-size="18" font-family="Inter, Arial, sans-serif" text-anchor="middle">transaction</text>
+
+  <rect x="360" y="170" width="240" height="280" rx="16" fill="#1E293B" stroke="#06B6D4" stroke-width="2"/>
+  <text x="480" y="220" fill="#22D3EE" font-size="34" font-family="Inter, Arial, sans-serif" text-anchor="middle" font-weight="700">C</text>
+  <text x="480" y="258" fill="#E2E8F0" font-size="26" font-family="Inter, Arial, sans-serif" text-anchor="middle" font-weight="700">Consistency</text>
+  <text x="480" y="300" fill="#94A3B8" font-size="18" font-family="Inter, Arial, sans-serif" text-anchor="middle">Rules and invariants</text>
+  <text x="480" y="328" fill="#94A3B8" font-size="18" font-family="Inter, Arial, sans-serif" text-anchor="middle">always preserved</text>
+
+  <rect x="630" y="170" width="240" height="280" rx="16" fill="#1E293B" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="750" y="220" fill="#A78BFA" font-size="34" font-family="Inter, Arial, sans-serif" text-anchor="middle" font-weight="700">I</text>
+  <text x="750" y="258" fill="#E2E8F0" font-size="26" font-family="Inter, Arial, sans-serif" text-anchor="middle" font-weight="700">Isolation</text>
+  <text x="750" y="300" fill="#94A3B8" font-size="18" font-family="Inter, Arial, sans-serif" text-anchor="middle">Concurrent work</text>
+  <text x="750" y="328" fill="#94A3B8" font-size="18" font-family="Inter, Arial, sans-serif" text-anchor="middle">without interference</text>
+
+  <rect x="900" y="170" width="240" height="280" rx="16" fill="#1E293B" stroke="#3B82F6" stroke-width="2"/>
+  <text x="1020" y="220" fill="#60A5FA" font-size="34" font-family="Inter, Arial, sans-serif" text-anchor="middle" font-weight="700">D</text>
+  <text x="1020" y="258" fill="#E2E8F0" font-size="26" font-family="Inter, Arial, sans-serif" text-anchor="middle" font-weight="700">Durability</text>
+  <text x="1020" y="300" fill="#94A3B8" font-size="18" font-family="Inter, Arial, sans-serif" text-anchor="middle">Committed data</text>
+  <text x="1020" y="328" fill="#94A3B8" font-size="18" font-family="Inter, Arial, sans-serif" text-anchor="middle">survives crashes</text>
+</svg>

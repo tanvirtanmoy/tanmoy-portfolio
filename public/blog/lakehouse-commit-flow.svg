@@ -1,0 +1,34 @@
+<svg width="1200" height="620" viewBox="0 0 1200 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="620" rx="24" fill="#0F172A"/>
+  <text x="600" y="82" fill="#E2E8F0" font-size="38" font-family="Inter, Arial, sans-serif" text-anchor="middle" font-weight="700">Lakehouse ACID Commit Flow</text>
+  <text x="600" y="116" fill="#94A3B8" font-size="20" font-family="Inter, Arial, sans-serif" text-anchor="middle">Delta/Iceberg style optimistic concurrency with metadata snapshots</text>
+
+  <rect x="70" y="180" width="240" height="150" rx="14" fill="#1E293B" stroke="#3B82F6" stroke-width="2"/>
+  <text x="190" y="230" fill="#E2E8F0" font-size="21" font-family="Inter, Arial, sans-serif" text-anchor="middle" font-weight="700">Read current</text>
+  <text x="190" y="258" fill="#E2E8F0" font-size="21" font-family="Inter, Arial, sans-serif" text-anchor="middle" font-weight="700">metadata version</text>
+
+  <rect x="350" y="180" width="240" height="150" rx="14" fill="#1E293B" stroke="#06B6D4" stroke-width="2"/>
+  <text x="470" y="230" fill="#E2E8F0" font-size="21" font-family="Inter, Arial, sans-serif" text-anchor="middle" font-weight="700">Write new</text>
+  <text x="470" y="258" fill="#E2E8F0" font-size="21" font-family="Inter, Arial, sans-serif" text-anchor="middle" font-weight="700">data files</text>
+
+  <rect x="630" y="180" width="240" height="150" rx="14" fill="#1E293B" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="750" y="230" fill="#E2E8F0" font-size="21" font-family="Inter, Arial, sans-serif" text-anchor="middle" font-weight="700">Attempt atomic</text>
+  <text x="750" y="258" fill="#E2E8F0" font-size="21" font-family="Inter, Arial, sans-serif" text-anchor="middle" font-weight="700">metadata commit</text>
+
+  <rect x="910" y="180" width="220" height="150" rx="14" fill="#1E293B" stroke="#3B82F6" stroke-width="2"/>
+  <text x="1020" y="230" fill="#E2E8F0" font-size="21" font-family="Inter, Arial, sans-serif" text-anchor="middle" font-weight="700">New snapshot</text>
+  <text x="1020" y="258" fill="#E2E8F0" font-size="21" font-family="Inter, Arial, sans-serif" text-anchor="middle" font-weight="700">becomes visible</text>
+
+  <path d="M310 255H340" stroke="#60A5FA" stroke-width="4"/>
+  <path d="M590 255H620" stroke="#22D3EE" stroke-width="4"/>
+  <path d="M870 255H900" stroke="#A78BFA" stroke-width="4"/>
+  <polygon points="340,255 326,247 326,263" fill="#60A5FA"/>
+  <polygon points="620,255 606,247 606,263" fill="#22D3EE"/>
+  <polygon points="900,255 886,247 886,263" fill="#A78BFA"/>
+
+  <rect x="170" y="390" width="860" height="170" rx="14" fill="#111827" stroke="#334155"/>
+  <text x="600" y="435" fill="#E2E8F0" font-size="24" font-family="Inter, Arial, sans-serif" text-anchor="middle" font-weight="700">Conflict Handling</text>
+  <text x="600" y="472" fill="#94A3B8" font-size="19" font-family="Inter, Arial, sans-serif" text-anchor="middle">If metadata version changed, writer retries with fresh snapshot</text>
+  <text x="600" y="504" fill="#94A3B8" font-size="19" font-family="Inter, Arial, sans-serif" text-anchor="middle">Readers keep using their original snapshot until commit succeeds</text>
+  <text x="600" y="536" fill="#94A3B8" font-size="19" font-family="Inter, Arial, sans-serif" text-anchor="middle">Result: high concurrency with consistent reads</text>
+</svg>
