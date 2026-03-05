@@ -51,16 +51,18 @@ export default function Hero() {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="#projects"
+            href="https://carbon.tanmoy.nl/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105"
           >
-            View Projects
+            Try Carbon Live
           </a>
           <a
-            href="#contact"
+            href="#projects"
             className="px-8 py-4 border-2 border-slate-600 text-slate-300 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-400 transition-all duration-300"
           >
-            Get In Touch
+            View Projects
           </a>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Hero from "./components/Hero";
+import CarbonProjectSpotlight from "./components/CarbonProjectSpotlight";
 import ProjectsGallery from "./components/ProjectsGallery";
 import SideProjects from "./components/SideProjects";
 import SkillsVisualization from "./components/SkillsVisualization";
@@ -69,6 +70,13 @@ export default function Home() {
       {/* Divider */}
       <div className="max-w-6xl mx-auto px-6">
         <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
+      </div>
+
+      <CarbonProjectSpotlight />
+
+      {/* Divider */}
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
       </div>
 
       <ProjectsGallery />
