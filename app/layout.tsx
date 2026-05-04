@@ -17,24 +17,25 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Tanmoy",
-    template: "%s",
+    default: "Tanmoy | Data Engineer & BI Analytics Specialist",
+    template: "%s | Tanmoy",
   },
   description:
-    "BI DevOps and Analytics Engineer portfolio showcasing real-time data pipelines, ML systems, cloud automation, and production dashboards with measurable business impact.",
+    "Portfolio of Tanmoy, a data professional working across BI dashboards, data engineering, AWS analytics platforms, Tableau, Power BI, SQL, Python, and DevOps automation.",
   applicationName: "Tanmoy Portfolio",
   keywords: [
-    "BI DevOps Engineer",
-    "Data Analytics Engineer",
     "Data Engineer",
-    "Analytics Engineer",
-    "Machine Learning Engineer",
-    "ETL Pipeline",
-    "AWS Athena",
+    "BI Specialist",
+    "Data Analyst",
     "Tableau",
-    "Python",
+    "Power BI",
     "SQL",
-    "Cloud Infrastructure",
+    "Python",
+    "AWS",
+    "Athena",
+    "Data Platform",
+    "Analytics Engineer",
+    "DevOps",
   ],
   authors: [{ name: personName }],
   creator: personName,
@@ -43,9 +44,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Tanmoy",
+    title: "Tanmoy | Data Engineer & BI Analytics Specialist",
     description:
-      "Real-time pipelines, production analytics dashboards, and machine learning solutions across cloud infrastructure.",
+      "BI dashboards, data engineering, AWS analytics platforms, and DevOps automation that turn complex operational data into decision-ready insights.",
     url: siteUrl,
     siteName: "Tanmoy Portfolio",
     locale: "en_US",
@@ -53,9 +54,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tanmoy",
+    title: "Tanmoy | Data Engineer & BI Analytics Specialist",
     description:
-      "Portfolio of production-grade data engineering, BI analytics, and ML delivery across modern cloud stacks.",
+      "BI, analytics, data engineering, and data platform work across Tableau, Power BI, SQL, Python, and AWS.",
   },
   robots: {
     index: true,

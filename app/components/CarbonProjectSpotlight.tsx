@@ -3,20 +3,31 @@ const carbonWorkflow = [
     step: "01",
     title: "Collect Usage Inputs",
     description:
-      "Users enter operational and activity data such as travel, energy, and resource consumption through a guided flow.",
+      "Users enter operational activity data such as travel, energy use, and resource consumption through a guided form.",
   },
   {
     step: "02",
     title: "Estimate Emissions",
     description:
-      "Carbon converts raw activity data into emission estimates using standardized calculation logic and transparent assumptions.",
+      "The product converts raw activity data into emission estimates using transparent calculation logic and clear assumptions.",
   },
   {
     step: "03",
     title: "Surface Actionable Insights",
     description:
-      "A focused dashboard highlights footprint hotspots and reduction opportunities to support faster, data-backed decisions.",
+      "The dashboard highlights footprint hotspots, trends, and reduction opportunities so users can make faster, data-backed decisions.",
   },
+];
+
+const carbonTags = [
+  "Analytics Product",
+  "BI Dashboard",
+  "Data Engineering",
+  "Sustainability",
+  "Decision Support",
+  "Streamlit",
+  "Python",
+  "AWS / Athena",
 ];
 
 export default function CarbonProjectSpotlight() {
@@ -24,13 +35,13 @@ export default function CarbonProjectSpotlight() {
     <section id="carbon" className="py-20 px-6 max-w-6xl mx-auto">
       <div className="text-center mb-14">
         <span className="inline-block px-4 py-1.5 rounded-full border border-cyan-500/40 bg-cyan-500/10 text-cyan-300 text-sm font-semibold mb-5">
-          New Project Launch
+          Featured Analytics Product
         </span>
         <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-400">
-          Carbon: How It Works
+          Carbon: Sustainability Analytics Product
         </h2>
         <p className="text-slate-400 text-lg max-w-3xl mx-auto">
-          Carbon is a live product focused on helping users estimate footprint, understand where emissions come from, and prioritize improvements.
+          Carbon is an analytics product that helps users estimate footprint, understand emission drivers, and identify practical reduction opportunities through a guided input flow and insight-focused dashboard.
         </p>
       </div>
 
@@ -44,6 +55,23 @@ export default function CarbonProjectSpotlight() {
             <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
             <p className="text-slate-400 text-sm">{item.description}</p>
           </div>
+        ))}
+      </div>
+
+      {/* Why this matters */}
+      <div className="bg-slate-800/40 border border-slate-700 rounded-xl p-6 mb-8">
+        <h3 className="text-lg font-bold text-cyan-300 mb-2">Why this matters</h3>
+        <p className="text-slate-300 leading-relaxed">
+          This project shows my ability to connect data engineering, analytics, dashboard design, and sustainability use cases into one usable product.
+        </p>
+      </div>
+
+      {/* Tags */}
+      <div className="flex flex-wrap gap-2 mb-10 justify-center">
+        {carbonTags.map((tag) => (
+          <span key={tag} className="px-3 py-1 bg-slate-700/50 text-slate-300 text-xs rounded font-mono border border-slate-600">
+            {tag}
+          </span>
         ))}
       </div>
 

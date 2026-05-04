@@ -11,7 +11,7 @@ export default function Contact() {
         <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400">
           Let&apos;s Connect
         </h2>
-        <p className="text-slate-400 text-lg">Open to collaboration, opportunities, and discussing all things data</p>
+        <p className="text-slate-400 text-lg">Open to BI, Data Analyst, Data Engineer, and Data Platform opportunities.</p>
       </div>
 
       {/* Contact Cards */}
@@ -62,7 +62,7 @@ export default function Contact() {
       {/* Bottom CTA */}
       <div className="mt-12 pt-12 border-t border-slate-700 text-center">
         <p className="text-slate-400 mb-6">
-          Interested in working together on data projects or want to discuss your pipeline architecture?
+          Looking for someone who can connect dashboards, data pipelines, analytics, and platform reliability? Let&apos;s connect.
         </p>
         <a
           href="mailto:tanmoy.tanvir001@gmail.com"

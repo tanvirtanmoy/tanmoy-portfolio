@@ -24,19 +24,23 @@ export default function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
-          Data-Driven Engineer
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
+          Data Engineer | BI &amp; Analytics | Data Platform
         </h1>
 
-        <p className="text-xl md:text-2xl text-slate-300 mb-8 font-light">
-          Architecting real-time pipelines, building ML models, and transforming data into insights
+        <p className="text-lg md:text-2xl text-slate-300 mb-6 font-light max-w-3xl mx-auto">
+          I build reliable data platforms, BI dashboards, and analytics products that turn complex operational data into decision-ready insights.
+        </p>
+
+        <p className="text-base text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+          I work at the intersection of data engineering, BI, and DevOps. My work includes production Tableau dashboards, SQL/AWS data pipelines, analytics automation, data validation, and ML-powered decision support for large-scale engineering environments.
         </p>
 
         {/* Key Metrics */}
         <div className="grid grid-cols-3 gap-6 mb-12 max-w-2xl mx-auto">
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-4">
             <div className="text-3xl font-bold text-blue-400 mb-1">6+</div>
-            <div className="text-sm text-slate-400">Dashboards in Prod</div>
+            <div className="text-sm text-slate-400">Production Dashboards</div>
           </div>
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-4">
             <div className="text-3xl font-bold text-cyan-400 mb-1">137+</div>
@@ -44,25 +48,23 @@ export default function Hero() {
           </div>
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-4">
             <div className="text-3xl font-bold text-purple-400 mb-1">10K+</div>
-            <div className="text-sm text-slate-400">Users Across Clusters</div>
+            <div className="text-sm text-slate-400">Users Across Compute Clusters</div>
           </div>
         </div>
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://carbon.tanmoy.nl/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#projects"
             className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105"
           >
-            Try Carbon Live
+            View Projects
           </a>
           <a
-            href="#projects"
+            href="#carbon"
             className="px-8 py-4 border-2 border-slate-600 text-slate-300 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-400 transition-all duration-300"
           >
-            View Projects
+            Explore Carbon
           </a>
         </div>
       </div>

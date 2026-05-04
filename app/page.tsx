@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Hero from "./components/Hero";
+import WhereIFit from "./components/WhereIFit";
 import CarbonProjectSpotlight from "./components/CarbonProjectSpotlight";
 import ProjectsGallery from "./components/ProjectsGallery";
 import SideProjects from "./components/SideProjects";
@@ -10,16 +11,16 @@ import Contact from "./components/Contact";
 import { personName, siteUrl } from "./seo";
 
 export const metadata: Metadata = {
-  title: "Tanmoy",
+  title: "Tanmoy | Data Engineer & BI Analytics Specialist",
   description:
-    "Explore Tanmoy's portfolio featuring data engineering pipelines, Tableau analytics products, cloud automation, and ML-powered prediction systems.",
+    "Portfolio of Tanmoy, a data professional working across BI dashboards, data engineering, AWS analytics platforms, Tableau, Power BI, SQL, Python, and DevOps automation.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Tanmoy",
+    title: "Tanmoy | Data Engineer & BI Analytics Specialist",
     description:
-      "Production dashboards, cloud-scale analytics, and ML systems focused on measurable impact.",
+      "BI dashboards, data engineering, and data platform work that turns complex operational data into decision-ready insights.",
     url: siteUrl,
     type: "website",
   },
@@ -33,20 +34,22 @@ export default function Home() {
         "@type": "Person",
         name: personName,
         url: siteUrl,
-        jobTitle: "BI DevOps & Data Analytics Engineer",
+        jobTitle: "Data Engineer & BI/Analytics Specialist",
         sameAs: [
           "https://www.linkedin.com/in/tanvir-tanmoy",
           "https://github.com/tanvirtanmoy",
         ],
         knowsAbout: [
-          "Data Engineering",
-          "Analytics Engineering",
-          "Machine Learning",
+          "Business Intelligence",
           "Tableau",
+          "Power BI",
+          "Data Analytics",
+          "Data Engineering",
+          "Data Platform",
           "AWS",
           "SQL",
           "Python",
-          "ETL",
+          "DevOps",
         ],
       },
       {
@@ -70,6 +73,13 @@ export default function Home() {
       {/* Divider */}
       <div className="max-w-6xl mx-auto px-6">
         <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
+      </div>
+
+      <WhereIFit />
+
+      {/* Divider */}
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
       </div>
 
       <CarbonProjectSpotlight />

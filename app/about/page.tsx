@@ -5,14 +5,14 @@ import { personName, siteUrl } from "../seo";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "About Tanmoy: BI DevOps and Data Analytics Engineer with experience in ML pipelines, cloud automation, and sustainability-driven software engineering.",
+    "About Tanmoy: Data Engineer and BI/Analytics Specialist building reliable data platforms, dashboards, and decision-ready insights with Tableau, Power BI, SQL, Python, and AWS.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About Tanmoy | BI DevOps & Data Analytics Engineer",
+    title: "About Tanmoy | Data Engineer & BI Analytics Specialist",
     description:
-      "Background, career journey, and technical focus across analytics engineering, cloud, and machine learning.",
+      "Background, career journey, and technical focus across BI, analytics, data engineering, and data platform work.",
     url: `${siteUrl}/about`,
     type: "profile",
   },
@@ -34,7 +34,7 @@ export default function About() {
         mainEntity: {
           "@type": "Person",
           name: personName,
-          jobTitle: "BI DevOps & Data Analytics Engineer",
+          jobTitle: "Data Engineer & BI/Analytics Specialist",
         },
       },
       {
@@ -93,10 +93,10 @@ export default function About() {
           </div>
           <div className="bg-gradient-to-br from-blue-500/5 to-cyan-500/5 backdrop-blur-sm border border-blue-500/20 rounded-xl p-8 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10">
             <p className="text-slate-300 text-lg leading-relaxed mb-4">
-              I&apos;m a data-driven professional with a strong background in data analysis, data engineering, and cloud infrastructure. I leverage complex datasets to uncover actionable insights that empower organizations to make well-informed decisions. My expertise spans across the full data lifecycle—from pipeline architecture to analytics—enabling me to bridge technical excellence with business impact.
+              I&apos;m a data professional working across BI, data engineering, and cloud-based analytics platforms. I build dashboards, data pipelines, validation workflows, and analytics products that help teams understand complex operational data and make better decisions.
             </p>
             <p className="text-slate-300 text-lg leading-relaxed">
-              My proficiency in BI tools (Tableau, Power BI) combined with strong programming skills in SQL and Python allows me to transform raw data into compelling narratives. As a collaborative team player, I excel at fostering effective communication and project management, ensuring stakeholders understand insights and can act on them confidently.
+              My primary BI experience is with Tableau and Tableau Cloud, supported by hands-on Power BI experience. I also work heavily with SQL, Python, AWS, and automation workflows, which helps me bridge the gap between dashboard users, data engineering, and platform reliability.
             </p>
           </div>
         </section>
@@ -125,10 +125,10 @@ export default function About() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { icon: "🏗️", title: "End-to-End Data Expertise", desc: "Full proficiency across the data stack—from pipeline architecture and CI/CD to analytics and visualization—enabling holistic solutions" },
-              { icon: "📈", title: "Business Acumen", desc: "Strong ability to translate complex technical datasets into actionable business insights that drive informed decision-making" },
-              { icon: "🤝", title: "Collaborative Leadership", desc: "Excellent communicator and team player who fosters effective collaboration, ensuring stakeholders understand and trust data insights" },
-              { icon: "🌱", title: "Sustainability Focus", desc: "Passionate about Green IT and using technology responsibly to achieve sustainability—combining innovation with environmental consciousness" },
+              { icon: "🏗️", title: "End-to-End Data Expertise", desc: "Experience across the full data lifecycle: raw data, pipelines, validation, modeling, dashboards, and production support." },
+              { icon: "📈", title: "Business Acumen", desc: "Ability to translate technical data into clear insights, KPIs, and recommendations for stakeholders." },
+              { icon: "🤝", title: "BI + Engineering Combination", desc: "Comfortable working both on the dashboard layer and the underlying data platform, making analytics more reliable and scalable." },
+              { icon: "🌱", title: "Sustainability Focus", desc: "Background in Green IT and sustainability-focused software engineering, with interest in responsible and impactful technology." },
             ].map((strength, i) => (
               <div key={i} className="group">
                 <div className="bg-gradient-to-br from-blue-500/15 to-cyan-500/15 border border-blue-500/30 rounded-xl p-6 hover:border-blue-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 hover:-translate-y-1 h-full">
@@ -201,11 +201,8 @@ export default function About() {
             <h2 className="text-3xl font-bold text-white">What I&apos;m Looking For</h2>
           </div>
           <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-xl p-8 hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/15">
-            <p className="text-slate-300 text-lg leading-relaxed mb-4">
-              I&apos;m seeking challenging opportunities where I can apply my data engineering and analytics expertise while contributing to meaningful, sustainable outcomes. I&apos;m interested in roles that value innovation, data-driven decision-making, and environmental responsibility—whether in tech, finance, energy, or other forward-thinking organizations.
-            </p>
             <p className="text-slate-300 text-lg leading-relaxed">
-              I&apos;m open to collaborative projects, mentorship opportunities, and conversations about leveraging data for social and environmental impact. If you&apos;re working on something interesting or think we could create synergy, I&apos;d love to connect and explore possibilities together.
+              I&apos;m looking for roles in BI, data analytics, data engineering, or data platform engineering where I can combine dashboard development, SQL/Python, cloud data platforms, and stakeholder collaboration. I&apos;m especially interested in teams that care about reliable data, practical insights, and measurable business impact.
             </p>
           </div>
         </section>
