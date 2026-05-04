@@ -57,17 +57,20 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Carbon Sustainability Analytics Product",
+    title: "Carbon: Green Cloud & Country Analytics",
     category: "Analytics Product / Sustainability BI",
     filter: "BI & Analytics",
     description:
-      "Built a sustainability-focused analytics product that helps users estimate emissions, identify footprint hotspots, and explore reduction opportunities.",
-    problem: "Users often lack a simple way to connect activity data with understandable environmental impact.",
-    solution: "Created a guided input flow, emission estimation logic, and an insight-focused dashboard.",
-    impact: "Turns raw operational data into decision-ready sustainability insights.",
-    tools: ["Python", "Streamlit", "SQL / Athena", "Dashboard Design", "Sustainability Analytics"],
+      "An analytics product that ranks EU countries and AWS regions by carbon emissions, offers a cost-vs-green comparison for AWS services, and includes an AI chatbot that answers user questions about the dashboards.",
+    problem:
+      "Engineers and decision-makers struggle to choose cloud regions and services that are both cost-efficient and low-carbon.",
+    solution:
+      "Built interactive dashboards comparing EU countries and AWS regions, a cost-vs-green AWS service comparator, and an integrated AI chatbot for natural-language exploration.",
+    impact:
+      "Helps users pick greener AWS regions and services without giving up cost-efficiency, with self-serve answers via the chatbot.",
+    tools: ["Python", "Streamlit", "AWS / Athena", "AI Chatbot", "Dashboard Design", "Sustainability Analytics"],
     icon: "🌱",
-    highlight: "Live product · Decision-ready insights",
+    highlight: "EU + AWS region dashboards · Cost vs. green compare · AI chatbot",
   },
   {
     id: 4,
